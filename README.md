@@ -10,8 +10,8 @@
 - Số epic: 13 · Sprint giả lập đã chạy: *(điền ở bước 9)*
 
 ## 2. Link
-- Repo: *(điền sau khi tạo)*
-- GitHub Project: *(điền ở bước 3)*
+- Repo: https://github.com/khoent-2975/lab5-product-b
+- GitHub Project: https://github.com/users/khoent-2975/projects/1
 - Báo cáo HTML của skill chấm SWP: *(điền ở bước 7)*
 
 ## 3. Cấu trúc repo
