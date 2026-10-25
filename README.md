@@ -40,12 +40,12 @@
 
 Hai file HTML tự chứa, mở thẳng bằng trình duyệt, không cần chạy server.
 
-**Đã mở thử bằng cửa sổ ẩn danh** (không đăng nhập GitHub), ngày 2026-10-25:
+**Đã mở thử bằng cửa sổ ẩn danh** (không đăng nhập GitHub), ngày 2026-10-25 — cả ba đều truy cập được:
 
 | Link | Kết quả |
 |---|---|
 | Repo | ✅ mở được — `visibility: public` |
-| GitHub Project số 1 | ⚠️ **chưa mở được — đang `public: false`, trả 404.** Phải bật công khai trước khi nộp |
+| GitHub Project số 1 | ✅ mở được — đã bật công khai, hiện đủ 307 issue cùng các cột Status, Sprint, SWP, Giờ ước lượng, Người phụ trách |
 | Hai file HTML trong repo | ✅ tải và hiển thị được qua `raw.githubusercontent.com` |
 
 ## 3. Cấu trúc repo
