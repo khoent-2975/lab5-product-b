@@ -4,17 +4,33 @@
 
 ## 1. Tổng quan
 
-- Backlog rã từ bộ thiết kế **LAB-4** nộp ngày **2026-10-21** (15 màn · architecture · database · 4 detail design · 5 ADR).
-- Tiền đề có thay đổi so với LAB-4 — xem [PREMISE.md](PREMISE.md): 3 spec sửa/thêm · 5 giả định bổ sung · 6 hướng đã chốt.
-- **307 issue** `#1`–`#307` trên board: 13 epic · 26 story · 54 task cha BE/FE · **176 dev task** · 38 câu hỏi khách.
-- **Ước công: 671 SWP · 1.140,7 giờ · 142,6 ngày công.** Quy ước **1 SWP = 1,7 giờ**, là **giờ dev thuần** — không gồm QA.
-- Số epic: **13** · Sprint giả lập đã chạy: **Sprint 1** (26/10 → 06/11/2026, 10 ngày làm việc) — 45 ticket · 157 SWP · kết quả **37 Done / 122 SWP = 78%**.
+- Backlog này tôi rã ra từ bộ thiết kế **LAB-4** nộp ngày **21/10/2026** — 15 màn hình, kèm bản
+  kiến trúc, mô hình dữ liệu, 4 bản thiết kế chi tiết và 5 quyết định kiến trúc.
+- **Tiền đề có thay đổi so với LAB-4.** Trong lúc rã task tôi tìm ra ba chỗ spec phải sửa, phải
+  thêm năm giả định, và phải chốt sáu hướng mà LAB-4 còn để ngỏ. Tất cả ghi trong
+  [PREMISE.md](PREMISE.md).
+- Rã ra **307 issue** (`#1`–`#307`), chia làm **13 epic**. Trong đó có 26 story, 54 task cha cho
+  hai vai BE và FE, **176 dev task** thật sự sinh code, và 38 câu hỏi phải gửi khách.
+- Ước công cả backlog: **671 SWP**, quy ra **1.140,7 giờ**, tức **142,6 ngày công**. Tôi chốt một
+  điểm SWP đổi ra 1,7 giờ. Đây là **giờ của lập trình viên thôi**.
+- Sprint giả lập đã chạy: **Sprint 1**, hai tuần từ 26/10 đến 06/11/2026 (10 ngày làm việc), nhận
+  45 ticket tức 157 SWP. Hết sprint làm xong 37 ticket, được 122 SWP — **78%** số điểm đã nhận.
 
-> **Ba chỗ con số này chưa nói hết**, ghi ở đây để không ai trích nhầm: board **không có ticket QA**
-> (LAB-1 cho phần tương ứng 92 ngày QA trên 354 ngày dev của chính nó ⇒ tỉ lệ **QA : dev = 26%**,
-> áp lên 142,6 ra **~37 ngày công QA** chưa tính) · board **không có ticket
-> sửa bug** (LAB-1 chừa 41 ngày, tức **~12% công dev**) · **E12 nền tảng chung hụt 90%** so với
-> LAB-1, nghi rã thiếu. Chi tiết: [estimate.md](estimate.md) mục 2 và mục 5.
+> **Con số 142,6 ngày công chưa phải là toàn bộ công của dự án.** Tôi ghi ba chỗ còn hụt ngay đây,
+> để sau này không ai cầm nhầm con số đó đi báo giá.
+>
+> - **Chưa có công kiểm thử.** Backlog này tôi cố ý chỉ rã việc của lập trình viên, không rã việc
+>   QA — vì QA phải đo bằng thang điểm riêng, trộn chung một thang thì con số tổng mất nghĩa. Nhìn
+>   sang LAB-1 thì cứ 100 ngày công lập trình, QA tốn thêm khoảng 26 ngày nữa. Chiếu tỉ lệ đó vào
+>   đây, còn **khoảng 37 ngày công QA** nằm ngoài con số 142,6.
+> - **Chưa có công sửa lỗi.** Trên board không ticket nào mang việc sửa bug, đơn giản vì QA chưa
+>   test thì bug chưa sinh ra. Nhưng việc làm ở Sprint 1 thế nào cũng có lỗi, và công sửa vẫn phải
+>   trả ở những sprint sau. LAB-1 chừa sẵn cho khoản này **khoảng 12% công lập trình**.
+> - **Phần nền tảng dùng chung nhiều khả năng tôi rã còn thiếu.** LAB-1 cho nhóm này 65 ngày công,
+>   bản rã của tôi chỉ ra 6,8 ngày — **hụt 90%**. Chênh nhiều tới mức tôi nghi mình bỏ sót việc chứ
+>   không phải LAB-1 ước thừa, nên chỗ này cần soi lại.
+>
+> Cả ba tôi phân tích kỹ trong [estimate.md](estimate.md), mục 2 và mục 5.
 
 ## 2. Link
 
@@ -56,9 +72,9 @@ Trong `reports/`:
 | `261025-GH-buoc-9-burndown-sprint-1.png` | Ảnh burndown Sprint 1 |
 | `261024-GH-buoc-0-quet-spec-lab4.md` | Bản nháp quét 15 screen spec của LAB-4 — nguyên liệu dựng `PREMISE.md` và `task-breakdown.md` |
 
-**Thứ tự đọc cho người mới:** `README.md` → `PREMISE.md` → `task-breakdown.md` → `estimate.md` →
-`progress-report.md` → `AI-report.md`. `task-breakdown.md` dài, chỉ mở khi cần tra nội dung gốc của
-một issue cụ thể.
+**Nếu anh/chị đọc lần đầu,** tôi gợi ý đi theo thứ tự: `README.md` → `PREMISE.md` →
+`estimate.md` → `progress-report.md` → `AI-report.md`. Riêng `task-breakdown.md` dài 6.846 dòng,
+chỉ nên mở khi cần tra nội dung gốc của một issue cụ thể, đừng đọc tuần tự.
 
 ## 4. Spec → epic
 
@@ -81,10 +97,15 @@ chiếu công được, nên một epic có thể gom nhiều màn, và một m�
 | `scr-00-home-trang-chu.md` + phần dùng chung của cả 15 màn | [`#273`](https://github.com/khoent-2975/lab5-product-b/issues/273) — E12 Build the shared app shell, error boundaries and role surface | **Nghi rã thiếu — hụt 90% so với LAB-1**, xem `estimate.md` mục 5. 32 SWP · `#273`–`#293` |
 | `01-architecture.md` §9.1 — 8 mock của prototype LAB-2, không thuộc màn nào | [`#294`](https://github.com/khoent-2975/lab5-product-b/issues/294) — E13 Replace the eight prototype mocks with real integration points | Rã thô nhất: 8 dev task mang 88 SWP, trung bình 11 điểm/ticket so với 3,8 của cả board. `#294`–`#307` |
 
-**Cách đánh dấu trên board:** `Issue Type` không dùng được (repo cá nhân, `repository.issueTypes`
-trả `null`), nên cấp được đánh bằng **nhãn** `type:epic` / `type:story` / `type:devtask` /
-`type:investigation`, và quan hệ cha–con nối bằng **sub-issue native** của GitHub.
+### Vài điều về cách tôi dựng board
 
-**Trường trên Project:** `Status` · `Sprint` (iteration) · `SWP` (number) · `Giờ ước lượng`
-(number) · `Người phụ trách` (text — người giả định, điền cho 45 ticket Sprint 1). 38 issue
-`type:investigation` để trống `SWP` và `Giờ` có chủ ý — hỏi khách thì chưa biết làm gì mà ước.
+- **Phân cấp bằng nhãn, không bằng Issue Type.** GitHub chỉ cho dùng Issue Type ở repo của tổ
+  chức, còn đây là repo cá nhân nên tính năng đó không bật được. Tôi thay bằng bốn nhãn:
+  `type:epic`, `type:story`, `type:devtask`, `type:investigation`.
+- **Quan hệ cha–con dùng sub-issue của chính GitHub,** không phải tự viết trong thân ticket. Nhờ
+  vậy Project tự đếm được tiến độ của từng task cha.
+- **Trên Project tôi dùng năm cột:** trạng thái, sprint, SWP, giờ ước lượng, và người phụ trách.
+  Người phụ trách là người giả định — BE-1, BE-2, FE-1, FE-2 — và tôi chỉ điền cho 45 ticket của
+  Sprint 1, vì đó là những ticket đã thật sự chạy qua mô phỏng.
+- **38 câu hỏi gửi khách để trống cả SWP lẫn giờ, và đó là chủ ý.** Chưa biết khách trả lời thế
+  nào thì chưa biết phải làm gì, mà chưa biết làm gì thì không ước công được.
