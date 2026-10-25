@@ -195,26 +195,27 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--border);
     <tfoot><tr><td>Tổng</td><td class="num">45</td><td class="num">157</td><td></td></tr></tfoot>
   </table></div>
 
-  <h3>Ba cách đọc cùng một sprint, đừng trộn chúng với nhau</h3>
+  <h3>Ba cách đọc cùng một kết quả</h3>
   <div class="figs">
-    <div class="fig fig--lead"><span class="n">78%</span><span class="k">làm xong — 122 trên 157 điểm</span>
-      <div class="d">Đã đóng hẳn. Con số tôi mang đi báo cáo.</div></div>
-    <div class="fig"><span class="n">86,6%</span><span class="k">lập trình xong — 136 trên 157 điểm</span>
-      <div class="d">Cộng thêm ba ticket đã code xong, còn chờ review.</div></div>
-    <div class="fig"><span class="n">90,6%</span><span class="k">tiêu hết số giờ — 241,9 trên 266,9 h</span>
-      <div class="d">Nói cách khác, chỉ còn <b>25 giờ</b> công chưa làm.</div></div>
+    <div class="fig fig--lead"><span class="n">78%</span><span class="k">tỉ lệ hoàn thành — 122 trên 157 điểm</span>
+      <div class="d">Số điểm đã đóng. Dùng để báo cáo tiến độ.</div></div>
+    <div class="fig"><span class="n">86,6%</span><span class="k">hoàn thành phần lập trình — 136/157</span>
+      <div class="d">Tính thêm ba ticket đã xong code, còn chờ review.</div></div>
+    <div class="fig"><span class="n">90,6%</span><span class="k">giờ đã sử dụng — 241,9 trên 266,9 h</span>
+      <div class="d">Chỉ còn <b>25 giờ</b> công chưa thực hiện.</div></div>
   </div>
-  <p>Ba con số lệch nhau khá xa, và lý do đáng chú ý: <b>bảng điểm hụt 22% trong khi công thực tế
-  chỉ hụt 9,4%.</b> Chuyện này xảy ra vì ticket quá to — riêng <code>#34</code> đã mang 8 điểm, ba
-  ticket đang chờ review mang thêm 14 điểm nữa, mà cả bốn đều đã code xong. Một ticket thiếu vài
-  giờ cũng kéo trọn số điểm của nó sang sprint sau.</p>
-  <h3>Nhưng mục tiêu sprint vẫn chưa nghiệm thu được</h3>
-  <p>Sprint này đặt mục tiêu làm xong ba phần: dựng tuyến giao hàng, luật giờ lái, và nền tảng dùng
-  chung. Vướng ở <code>#34</code> — đó là khối màn hình nơi người điều phối nhìn bốn dòng kết quả
-  kiểm giờ lái rồi bấm nút công bố tuyến.</p>
-  <p>Thiếu nó thì SCR-28 cho phép dựng tuyến nhưng không cho làm gì với tuyến vừa dựng. Đúng cái bẫy
-  mà bản thiết kế LAB-4 tuyên bố không chấp nhận: dẫn người dùng đi hết một luồng rồi mới báo là ngõ
-  cụt (xem <code>PREMISE</code> mục 3, dòng <code>V-1</code>).</p>
+  <p>Ba tỉ lệ lệch nhau đáng kể: <b>bảng điểm hụt 22% trong khi công thực tế chỉ hụt 9,4%.</b>
+  Nguyên nhân là kích thước ticket quá lớn. Riêng <code>#34</code> mang 8 điểm, ba ticket chờ
+  review mang thêm 14 điểm, cả bốn đều đã hoàn thành phần code. Một ticket thiếu vài giờ vẫn kéo
+  trọn số điểm của nó sang sprint sau — đây là hạn chế của cách đo theo điểm khi ticket không được
+  rã đủ nhỏ.</p>
+  <h3>Mục tiêu sprint chưa nghiệm thu được</h3>
+  <p>Sprint đặt mục tiêu hoàn thành ba phần: dựng tuyến giao hàng (E01), luật giờ lái (E02) và nền
+  tảng dùng chung (E12). Điểm vướng là <code>#34</code> — khối màn hình nơi người điều phối đọc bốn
+  dòng kết quả kiểm giờ lái rồi bấm nút công bố tuyến.</p>
+  <p>Thiếu khối này, SCR-28 cho phép dựng tuyến nhưng không cho thao tác tiếp trên tuyến vừa dựng.
+  Đó đúng là tình huống bản thiết kế LAB-4 tuyên bố không chấp nhận: dẫn người dùng đi hết một
+  luồng rồi mới báo là ngõ cụt (xem <code>PREMISE</code> mục 3, dòng <code>V-1</code>).</p>
 </section>
 
 <section>
@@ -230,16 +231,16 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--border);
     ticket đã đóng hẳn mới được trừ khỏi đường thực tế.</figcaption>
   </figure>
 
-  <p class="lede"><b>Đường thực tế nằm trên đường kế hoạch suốt cả sprint</b>, và sang tuần thứ hai thì hai vai
-  tách hẳn nhau. Bốn lý do, xếp theo mức đóng góp:</p>
+  <p class="lede"><b>Đường thực tế nằm trên đường kế hoạch suốt cả sprint</b>, và sang tuần thứ hai hai vai tách
+  hẳn nhau. Bốn nguyên nhân, xếp theo mức đóng góp:</p>
 
-  <div class="cause cause--lead"><div class="h">Một — front-end hết việc từ giữa sprint. Đây là chỗ lệch lớn nhất</div><p>Hết ngày thứ 5, front-end đã làm xong toàn bộ 12 ticket vay từ các epic khác, và xong luôn phần nền tảng của mình. Từ ngày thứ 6 trở đi, ba ticket còn lại đều phải chờ back-end: màn form A chờ API route, khối đơn chưa phân công chờ hàm lấy danh sách đơn, khối bốn dòng ngưỡng chờ hợp đồng dữ liệu. <b>Ngày thứ 8 là đáy — front-end ngồi không 12,5 trên 14 giờ</b>, đúng chỗ dải màu trên biểu đồ. Tính cả sprint, front-end nhàn rỗi <b>36,1 giờ trên tổng 140 giờ</b>: hơn một phần tư sức người của vai này bốc hơi chỉ vì chờ, chứ không phải vì hết việc.</p></div>
-<div class="cause cause--lead"><div class="h">Hai — back-end thì ngược lại, chạy hết công suất</div><p>Suốt 10 ngày back-end chỉ rảnh đúng <b>2 giờ</b>. Cộng gộp hai vai thì tổng nhàn rỗi là 38,1 trên 280 giờ, nghe chỉ 13,6% — nhưng con số gộp ấy che mất điều quan trọng: gần như toàn bộ phần nhàn rỗi dồn vào một bên. Đây chính là rủi ro R5 hiện nguyên hình. Khối lượng việc trên board nghiêng 64% về back-end trong khi đội chia đôi 50/50. Trước đây đó mới là nhận định; sau sprint này nó là con số giờ đo được.</p></div>
-<div class="cause"><div class="h">Ba — hai mắt xích cuối chuỗi về quá muộn</div><p>API route đóng sáng ngày thứ 9. Hợp đồng dữ liệu <code>check_result</code> đóng sáng ngày thứ 10. Mà khối bốn dòng ngưỡng phụ thuộc vào hợp đồng đó, lại cần tới 13,6 giờ — chỉ còn một ngày thì làm được 7 giờ, thiếu 6,6. Cùng lúc, khối đơn chưa phân công không bao giờ đủ điều kiện bắt đầu vì ticket chặn nó chỉ kịp vào trạng thái chờ review, kéo theo ticket soát chuỗi tiếng Nhật cũng không tới lượt. Chỗ này là <b>lỗi khi rã ticket, không phải lỗi xếp lịch</b>: ticket front-end to nhất board lại nằm ở mắt cuối một chuỗi năm mắt.</p></div>
-<div class="cause"><div class="h">Bốn — một ngày chờ review, lặp lại suốt sprint</div><p>Ngày đầu tiên burndown không trừ được điểm nào, dù sáu ticket đã code xong hôm đó — tất cả nằm chờ review tới sáng hôm sau. Đường thực tế vì vậy khởi hành muộn một ngày và giữ nguyên khoảng cách đó tới cuối. Hết sprint vẫn còn 14 điểm kẹt ở chỗ chờ review. <b>Đây không phải trượt tiến độ, mà là cách đo</b>: tôi chỉ trừ điểm khi ticket đóng hẳn.</p></div>
-<div class="cause"><div class="h">Còn một chỗ nữa — con số “dùng 83% sức chứa” là ảo</div><p>266,9 giờ trên sức chứa danh nghĩa 320 giờ (4 người × 8 giờ × 10 ngày) thì đúng là 83%, nghe như còn dư chỗ. Nhưng tính trên sức chứa <b>thật sự dùng được</b> — 280 giờ, sau khi trừ họp và review — thì đã là <b>95%</b>. Sprint này không hề có đệm ngay từ lúc lên kế hoạch. Chi tiết ở rủi ro R7.</p></div>
+  <div class="cause cause--lead"><div class="h">Nguyên nhân 1 — front-end hết việc từ giữa sprint (chiếm phần lớn độ lệch)</div><p>Hết ngày thứ 5, front-end đã hoàn thành toàn bộ 12 ticket vay từ các epic khác và phần nền tảng của mình. Từ ngày thứ 6, ba ticket còn lại đều phải chờ back-end: màn form A chờ API route, khối đơn chưa phân công chờ hàm lấy danh sách đơn, khối bốn dòng ngưỡng chờ hợp đồng dữ liệu. <b>Ngày thứ 8 là đáy — front-end không có việc 12,5 trên 14 giờ</b>, tương ứng dải màu trên biểu đồ. Tính cả sprint, front-end chờ <b>36,1 giờ trên tổng 140 giờ</b>: hơn một phần tư sức chứa của vai này mất vì chờ, không phải vì thiếu việc trên board.</p></div>
+<div class="cause cause--lead"><div class="h">Nguyên nhân 2 — back-end kín việc gần như tuyệt đối</div><p>Suốt 10 ngày back-end chỉ có <b>2 giờ</b> không có việc. Cộng gộp hai vai thì tổng là 38,1 trên 280 giờ, tương đương 13,6%. Nhưng con số gộp che mất điểm cốt lõi: gần như toàn bộ phần không có việc dồn vào một vai. Đây là biểu hiện cụ thể của rủi ro R5 — khối lượng việc trên board nghiêng 64% về back-end trong khi đội chia đôi 50/50. Trước sprint này đó mới là một nhận định; nay đã có số giờ đo được.</p></div>
+<div class="cause"><div class="h">Nguyên nhân 3 — hai mắt xích cuối chuỗi phụ thuộc hoàn thành quá muộn</div><p>API route đóng sáng ngày thứ 9. Hợp đồng dữ liệu <code>check_result</code> đóng sáng ngày thứ 10. Khối bốn dòng ngưỡng phụ thuộc hợp đồng đó và cần 13,6 giờ — chỉ còn một ngày nên thực hiện được 7 giờ, thiếu 6,6. Cùng lúc, khối đơn chưa phân công không đủ điều kiện bắt đầu vì ticket chặn nó chỉ kịp vào trạng thái chờ review, kéo theo ticket soát chuỗi tiếng Nhật cũng không tới lượt. Nguyên nhân gốc nằm ở <b>cách rã ticket, không phải ở cách xếp lịch</b>: ticket front-end lớn nhất board lại nằm ở mắt cuối một chuỗi năm mắt phụ thuộc.</p></div>
+<div class="cause"><div class="h">Nguyên nhân 4 — độ trễ một ngày của khâu review, lặp lại suốt sprint</div><p>Ngày đầu tiên burndown không trừ được điểm nào, dù sáu ticket đã hoàn thành code trong ngày hôm đó — tất cả nằm chờ review tới sáng hôm sau. Đường thực tế vì vậy khởi hành muộn một ngày và giữ nguyên khoảng cách đó tới cuối. Hết sprint vẫn còn 14 điểm ở trạng thái chờ review. <b>Đây là đặc tính của cách đo, không phải trượt tiến độ</b>: điểm chỉ được trừ khi ticket đóng hẳn.</p></div>
+<div class="cause"><div class="h">Ghi chú thêm — tỉ lệ “dùng 83% sức chứa” không phản ánh đúng thực tế</div><p>266,9 giờ trên sức chứa danh nghĩa 320 giờ (4 người × 8 giờ × 10 ngày) cho tỉ lệ 83%, tạo cảm giác còn dư chỗ. Tính trên sức chứa <b>hiệu dụng</b> — 280 giờ, sau khi trừ họp và review — tỉ lệ thật là <b>95%</b>. Sprint được lên kế hoạch với gần như không có đệm. Chi tiết ở rủi ro R7.</p></div>
 
-  <div class="note"><b>Chỗ làm được.</b> Ticket mở menu SCR-19 xong ngay ngày đầu và đóng sáng ngày thứ hai. Nhờ vậy
+  <div class="note"><b>Phần đạt kế hoạch.</b> Ticket mở menu SCR-19 hoàn thành ngay ngày đầu và đóng sáng ngày thứ hai. Nhờ đó
   đường dẫn <code>/routes</code> trả về trang thật thay vì lỗi 404 ngay từ ngày thứ hai của sprint,
   và tiêu chí nghiệm thu đầu tiên của epic dựng tuyến có đường đi. Hai nhánh nền — migration và hàm
   tính giờ lái — chạy song song đúng như thiết kế, không mắt nào trễ.</div>
@@ -248,10 +249,11 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--border);
 <section>
   <div class="section-label">Phần 4</div>
   <h2>Rủi ro trễ <span class="verdict">cần thận trọng</span></h2>
-  <p class="lede">Bảng dưới dựng từ hai nguồn. Một là kết quả mô phỏng vừa chạy. Hai là năm góc nhìn
-  chuyên môn khác nhau — kiến trúc, bảo mật, hiệu năng, trải nghiệm người dùng, và một góc chuyên đi
-  phản biện — mỗi góc tự đánh giá riêng trước khi so với nhau. Cộng thêm bốn chỗ hụt tôi đã biết từ
-  trước, ghi trong <code>estimate.md</code> mục 2 và mục 5. Mười rủi ro xếp theo mức nặng giảm dần.</p>
+  <p class="lede">Bảng rủi ro dựng từ ba nguồn. Thứ nhất là kết quả mô phỏng trình bày ở trên. Thứ
+  hai là một lượt rà soát theo năm góc chuyên môn — kiến trúc, bảo mật, hiệu năng, trải nghiệm
+  người dùng và phản biện giả định — mỗi góc kết luận độc lập trước khi đối chiếu với nhau. Thứ ba
+  là bốn khoảng hụt đã xác định từ bước ước lượng, ghi trong <code>estimate.md</code> mục 2 và mục
+  5. Mười rủi ro xếp theo mức nghiêm trọng giảm dần.</p>
   <div class="tw"><table class="risk-table">
     <thead><tr><th>Rủi ro</th><th>Issue</th><th>Ảnh hưởng tới mốc nào</th><th>Hành động</th><th>Ai làm, khi nào</th></tr></thead>
     <tbody><tr><td><span class="rid">R1</span> — <b>Mục tiêu Sprint 1 không nghiệm thu được</b><br><span style="color:var(--text-dim)"><code>#34</code> còn 6,6 giờ nhưng nó là chỗ bấm nút công bố. SCR-28 dựng được tuyến mà không hành động được trên tuyến đó.</span></td><td><code>#34</code></td><td><code>AC-28-37</code> (hiện khoảng vi phạm chính xác) · <code>AC-28-45</code> (bật nút <code>公開へ進む</code>) · demo cuối Sprint 1</td><td>Tách <code>#34</code> làm hai: bốn dòng ngưỡng <b>chỉ đọc</b> đóng trước, phần gating nút công bố tách thành ticket riêng. 8 SWP ở mắt cuối chuỗi là hạt quá to cho một sprint.</td><td>FE-1 · ngày đầu Sprint 2 (09/11)</td></tr>
@@ -263,38 +265,51 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--border);
 <tr><td><span class="rid">R7</span> — <b>Sức chứa 83% đo sai mẫu số, và tỉ lệ 1,7 giờ/SWP là lập luận vòng tròn</b><br><span style="color:var(--text-dim)">266,9/320 giờ danh nghĩa = 83%, nhưng 266,9/280 giờ hiệu dụng = 95%. Thêm nữa, tỉ lệ 1,7 rút ra từ đúng E01+E02 — đúng cặp epic sprint này chạy, nên việc nó “vừa khít” không chứng minh gì cho 11 epic còn lại.</span></td><td>—</td><td>Cách cắt mọi sprint sau. Sprint 2 trở đi sẽ cắt quá tay nếu vẫn lấy 94 SWP/vai.</td><td>Cắt sprint theo 7 giờ/người/ngày: trần thực tế ~82 SWP/vai, không phải 94. Khi sang epic ngoài E01/E02, đo lại tỉ lệ bằng số thật của sprint đó thay vì giữ 1,7.</td><td>PM · khi cắt Sprint 2</td></tr>
 <tr><td><span class="rid">R8</span> — <b><code>#9</code> kiểm quyền ba lớp không có đường nghiệm thu độc lập</b><br><span style="color:var(--text-dim)">Đây là ticket an-toàn-trọng-yếu duy nhất của sprint, và không QA nào soát nó (xem R2).</span></td><td><code>#9</code></td><td>An toàn truy cập của cả 15 màn.</td><td>Bắt buộc review chéo BE-2 cộng một bộ test quyền tự động chạy trong CI trước khi đóng. Không đóng <code>#9</code> bằng lời khai của người viết nó.</td><td>BE-2 · trong Sprint 2</td></tr>
 <tr><td><span class="rid">R9</span> — <b>Đội không có người bản ngữ tiếng Nhật</b><br><span style="color:var(--text-dim)">40 chuỗi Nhật mới của SCR-28 và SCR-29 không ai soát được.</span></td><td><code>#54</code> (Blocked) · <code>#16</code> (chưa tới lượt)</td><td>Nghiệm thu phần chữ của SCR-28 và SCR-29. Với khách Nhật đây là loại lỗi dễ thấy nhất và rẻ nhất để sửa.</td><td>Đặt lịch một người bản ngữ ngoài đội, gộp 40 chuỗi vào một lượt soát. Không thu xếp được thì hạ xuống rủi ro chấp nhận và ghi vào biên bản sprint review.</td><td>PM · trước 09/11</td></tr>
-<tr><td><span class="rid">R10</span> — <b>12 ticket FE vay từ E03, E06, E07 không thuộc mục tiêu Sprint 1</b><br><span style="color:var(--text-dim)">Kéo vào chỉ để FE khỏi ngồi không. Chúng trượt thì <b>không chặn ai</b>.</span></td><td><code>#50</code> <code>#51</code> <code>#52</code> <code>#54</code> <code>#83</code> <code>#84</code> <code>#111</code> <code>#112</code> <code>#113</code> <code>#121</code> <code>#122</code> <code>#123</code> — 33 SWP</td><td><b>Không mốc nào.</b> Phải tách khỏi đường tới hạn khi đánh giá — trừ <code>#54</code>, nó nằm trong R9 vì lý do khác.</td><td>Báo tải FE bằng <b>hai</b> con số: có việc vay 74/94 = 79%, không có việc vay <b>41/94 = 44%</b>. Con số thứ hai mới là tình trạng thật, và nó chính là R5.</td><td>PM · mỗi lần báo tiến độ</td></tr></tbody>
+<tr><td><span class="rid">R10</span> — <b>12 ticket FE vay từ E03, E06, E07 không thuộc mục tiêu Sprint 1</b><br><span style="color:var(--text-dim)">Kéo vào chỉ để lấp sức chứa front-end. Chúng trượt thì <b>không chặn ai</b>.</span></td><td><code>#50</code> <code>#51</code> <code>#52</code> <code>#54</code> <code>#83</code> <code>#84</code> <code>#111</code> <code>#112</code> <code>#113</code> <code>#121</code> <code>#122</code> <code>#123</code> — 33 SWP</td><td><b>Không mốc nào.</b> Phải tách khỏi đường tới hạn khi đánh giá — trừ <code>#54</code>, nó nằm trong R9 vì lý do khác.</td><td>Báo tải FE bằng <b>hai</b> con số: có việc vay 74/94 = 79%, không có việc vay <b>41/94 = 44%</b>. Con số thứ hai mới là tình trạng thật, và nó chính là R5.</td><td>PM · mỗi lần báo tiến độ</td></tr></tbody>
   </table></div>
 
-  <h3>Hai chỗ năm tiếng nói cãi nhau</h3>
+  <h3>Hai đánh đổi trong phần đánh giá rủi ro</h3>
+  <p>Hai quyết định dưới đây có lập luận hợp lý ở cả hai phía. Tôi ghi lại cả hai hướng cùng căn
+  cứ của lựa chọn cuối, để sprint sau có thể xét lại nếu bối cảnh đổi.</p>
   <div class="cause cause--lead">
-    <div class="h">Về chuyện vay 12 ticket cho front-end làm</div>
-    <p>Góc hiệu năng bảo vay là đúng: không có chúng thì front-end còn ngồi không thêm 56 giờ nữa.
-    Góc phản biện bảo chính việc vay đã che mất vấn đề — bỏ chúng ra thì front-end chỉ còn 44% tải,
-    và ai nhìn cũng thấy ngay đội đang lệch. <b>Tôi xử thế này:</b> vẫn vay, vì đó là cách giảm
-    thiệt hại ngay bây giờ. Nhưng mỗi lần báo tiến độ phải đưa cả hai con số. Chữa cháy và đo đạc là
-    hai việc khác nhau, đừng để cái trước xoá dấu vết của cái sau.</p>
+    <div class="h">Đánh đổi 1 — có tiếp tục vay việc từ epic khác để lấp sức chứa front-end không</div>
+    <p><b>Lý lẽ giữ cách vay.</b> 12 ticket vay từ E03, E06 và E07 đã hấp thụ 33 điểm công việc.
+    Nếu bỏ, thời gian chờ của front-end tăng từ 36,1 giờ lên khoảng 92 giờ — gần hai phần ba sức
+    chứa của vai này bị bỏ không trong một sprint.</p>
+    <p><b>Lý lẽ bỏ cách vay.</b> Chính việc vay làm tải front-end trông như 79%, trong khi tải thật
+    tính theo mục tiêu sprint chỉ là 44%. Con số đẹp che mất một vấn đề ở cấp kế hoạch: khối lượng
+    việc nghiêng 64% về back-end nhưng đội lại chia đôi.</p>
+    <p><b>Quyết định.</b> Giữ cách vay, nhưng từ sprint sau báo cáo tải front-end bằng hai con số
+    tách bạch: tải có tính việc vay, và tải chỉ tính việc thuộc mục tiêu sprint. Vay là biện pháp
+    giảm lãng phí trước mắt, không được phép thay thế việc đo đúng mức mất cân đối. Yêu cầu này ghi
+    ở rủi ro R10.</p>
   </div>
   <div class="cause cause--lead">
-    <div class="h">Về chuyện có nên kéo khối bốn dòng ngưỡng lên làm sớm</div>
-    <p>Góc trải nghiệm người dùng đòi kéo lên, vì đó là thứ mang đi demo cuối sprint. Góc kiến trúc
-    nói không kéo được: nó phụ thuộc hợp đồng dữ liệu, mà hợp đồng lại phụ thuộc cả bốn ticket tính
-    ngưỡng. <b>Tôi xử thế này:</b> góc kiến trúc đúng về <b>thứ tự</b> — không thể đảo. Góc trải
-    nghiệm đúng về <b>phạm vi</b> — ticket đó quá to. Không dời được thì phải chẻ nhỏ ra, và đó
-    chính là hành động R1.</p>
+    <div class="h">Đánh đổi 2 — có đưa <code>#34</code> lên làm sớm hơn được không</div>
+    <p><b>Lý lẽ đưa lên sớm.</b> <code>#34</code> là khối màn hình quyết định của SCR-28 — nơi
+    người điều phối đọc kết quả kiểm giờ lái rồi bấm nút công bố. Thiếu nó thì sprint không có gì
+    để nghiệm thu, dù 78% điểm đã đóng.</p>
+    <p><b>Lý lẽ không đưa lên được.</b> <code>#34</code> phụ thuộc <code>#32</code> (hợp đồng dữ
+    liệu <code>check_result</code>), mà <code>#32</code> lại phụ thuộc cả bốn ticket tính ngưỡng.
+    Chuỗi phụ thuộc này có thật, không đảo được. Ép làm sớm chỉ dẫn tới dựng giao diện trên một hợp
+    đồng chưa chốt, rồi phải sửa lại khi hợp đồng ra.</p>
+    <p><b>Quyết định.</b> Không đổi thứ tự, mà đổi kích thước ticket. <code>#34</code> mang 8 điểm
+    — lớn nhất trong toàn bộ việc front-end — và nằm ở mắt cuối một chuỗi năm mắt; chỉ cần chuỗi
+    trễ một ngày là trọn 8 điểm trượt sang sprint sau. Tách làm hai: phần hiển thị bốn dòng ngưỡng
+    ở chế độ chỉ đọc, và phần điều kiện bật nút công bố. Hành động này ghi ở rủi ro R1.</p>
   </div>
 
-  <h3>Còn ngỏ</h3>
+  <h3>Những điểm còn để mở</h3>
   <ul>
-    <li><b>Sprint 2 tôi chưa cắt.</b> Hiện mới có hai ticket được gán sẵn. Khi cắt thì phải áp hai
-    bài học của sprint này: trần thật chỉ khoảng 82 điểm mỗi vai chứ không phải 94, và còn phải chừa
-    12% sức chứa cho việc sửa lỗi. Tính ra mỗi vai nhận được khoảng 72 điểm việc mới.</li>
-    <li><b>Nếu mô phỏng tiếp quá hai sprint thì phải giảm người.</b> Theo kế hoạch nhân sự của LAB-1,
-    từ tháng 01/2027 front-end rút còn 1 người, rồi nửa người. Giữ nguyên 2 người là sai với kế
+    <li><b>Sprint 2 chưa được cắt</b>, hiện mới có hai ticket gán sẵn. Khi cắt phải áp hai điều
+    chỉnh rút ra từ sprint này: trần thực tế khoảng 82 điểm mỗi vai thay vì 94, và chừa 12% sức
+    chứa cho công sửa lỗi. Phần việc mới mỗi vai nhận được còn khoảng 72 điểm.</li>
+    <li><b>Mô phỏng quá hai sprint phải giảm sức chứa theo.</b> Kế hoạch nhân sự của LAB-1 rút
+    front-end xuống 1 người từ tháng 01/2027, sau đó còn 0,5. Giữ nguyên 2 người là lệch so với kế
     hoạch đã gửi khách.</li>
-    <li><b>Lịch của tôi lệch hai tháng so với kế hoạch thật.</b> Sprint 1 ở đây bắt đầu 26/10/2026,
-    nhưng theo LAB-1 thì lúc đó dự án vẫn đang thiết kế cơ bản — tháng bắt đầu viết code là 12/2026.
-    Đây là giả lập cho bài lab, không phải lịch chạy thật.</li>
+    <li><b>Lịch mô phỏng lệch hai tháng so với kế hoạch gốc.</b> Sprint 1 ở đây bắt đầu 26/10/2026,
+    trong khi theo LAB-1 thì thời điểm đó dự án vẫn đang ở giai đoạn thiết kế cơ bản; tháng bắt đầu
+    xây dựng là 12/2026. Đây là mốc giả lập phục vụ bài lab, không phải lịch triển khai thật.</li>
   </ul>
 </section>
 
