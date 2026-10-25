@@ -27,8 +27,7 @@
 >   test thì bug chưa sinh ra. Nhưng việc làm ở Sprint 1 thế nào cũng có lỗi, và công sửa vẫn phải
 >   trả ở những sprint sau. LAB-1 chừa sẵn cho khoản này **khoảng 12% công lập trình**.
 > - **Phần nền tảng dùng chung nhiều khả năng tôi rã còn thiếu.** LAB-1 cho nhóm này 65 ngày công,
->   bản rã của tôi chỉ ra 6,8 ngày — **hụt 90%**. Chênh nhiều tới mức tôi nghi mình bỏ sót việc chứ
->   không phải LAB-1 ước thừa, nên chỗ này cần soi lại.
+>   bản rã của tôi chỉ ra 6,8 ngày — **hụt 90%**. Chỗ này cần soi lại ở các task chưa rã đợt này.
 >
 > Cả ba tôi phân tích kỹ trong [estimate.md](estimate.md), mục 2 và mục 5.
 
