@@ -1,9 +1,11 @@
 # AI-report — LAB-5 Product B
 
-**Lập ngày:** 2026-10-25 · Ba phần: **skill và prompt** · **cách review output của AI** · **điểm đặc biệt trong cách dùng AI**.
+**Lập ngày 25/10/2026.** File này có ba phần: tôi đã dùng skill gì và viết prompt ra sao, tôi đã
+review lại output của AI thế nào, và những điều rút ra về cách dùng AI.
 
-Bài này AI làm phần lớn khối lượng. Giá trị của tôi nằm ở chỗ **chặn những gì nó làm sai** — mục 2
-liệt kê tám chỗ, trong đó ba chỗ nếu để lọt thì bảng ước công hoặc biểu đồ burndown sai.
+Nói thẳng thì bài này AI làm phần lớn khối lượng. Phần việc của tôi nằm ở chỗ khác: **chặn lại
+những gì nó làm sai**. Mục 2 liệt kê tám chỗ tôi bắt được, trong đó ba chỗ nếu để lọt thì bảng ước
+công hoặc biểu đồ burndown đã sai.
 
 ---
 

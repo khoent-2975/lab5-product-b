@@ -166,15 +166,18 @@ việc viết code — hai loại việc đo bằng hai thước khác nhau. Nh�
 con số tổng mất nghĩa: không biết 671 điểm là bao nhiêu công dev, bao nhiêu công kiểm thử, và tỉ lệ
 đổi ra giờ cũng không còn đúng cho bên nào. **Bài lab này chỉ rã và chấm việc dev.**
 
-Hệ quả, ghi để người đọc không hiểu nhầm con số:
+Quyết định này kéo theo bốn hệ quả, tôi ghi ra đây để sau không ai đọc nhầm con số:
 
-- **142,6 ngày công là công dev thuần.** Không gồm QA
-- LAB-1 ước QA **235 ngày công** cho cả dự án, nặng thứ hai sau BE. Riêng phần LAB-5 chạm tới là
-  **92 ngày QA trên 354 ngày công dev** của chính LAB-1 cho đúng phần đó ⇒ **tỉ lệ QA : dev = 26%**.
-  Áp tỉ lệ ấy lên 142,6 ngày công dev của LAB-5 ⇒ **khoảng 37 ngày công QA**. ⚠ Đừng cộng thẳng 92
-  vào 142,6 — 92 thuộc thang phạm vi rộng hơn của LAB-1, cộng vào là thành +64,5% chứ không phải 26%
-- Đội vẫn có 1 QA theo `GĐ-L5-5`, nhưng việc của người đó không nằm trên board này
-- Burndown ở bước 9 vì vậy chỉ vẽ được việc dev
+- **142,6 ngày công chỉ là công của lập trình viên.** Không có một giờ QA nào trong đó.
+- **Phần QA còn thiếu khoảng 37 ngày công nữa.** Cách tôi tính ra con số này: LAB-1 ước QA cho cả
+  dự án là 235 ngày, nặng thứ hai sau back-end. Riêng phần việc mà LAB-5 chạm tới, LAB-1 cho 92
+  ngày QA trên 354 ngày lập trình — tức **cứ 100 ngày lập trình thì QA tốn thêm 26 ngày**. Đem tỉ
+  lệ đó áp vào 142,6 ngày của tôi thì ra khoảng 37 ngày QA.
+- **Đừng cộng thẳng 92 ngày vào 142,6.** Đây là chỗ rất dễ nhầm. Con số 92 thuộc phạm vi rộng hơn
+  của LAB-1; cộng vào là thành tăng 64,5% chứ không phải 26%. Cái mượn được từ LAB-1 là **tỉ lệ**,
+  không phải con số tuyệt đối.
+- **Đội vẫn có 1 QA, chỉ là việc của người đó không nằm trên board này.** Và vì thế burndown ở
+  bước 9 cũng chỉ vẽ được việc lập trình, không vẽ được việc kiểm thử.
 
 ---
 

@@ -42,9 +42,10 @@ khỏi backlog.
 | **GĐ-L5-4** — Kế thừa nguyên vẹn sáu giả định `GĐ-1`…`GĐ-6` của LAB-4 (bỏ `保留` · 30 phút ngoài dải · biên `3℃` · cận dưới `−30℃` · hai mức severity · 2 cấp ⟷ 3 cấp) | `lab4-product-b/specs/PREMISE.md` §2.1 — cả sáu đều *"giả định vendor, khách chưa xác nhận"* | Không đổi estimate so với LAB-4. Riêng `GĐ-6` (2 ⟷ 3 cấp severity) đã được LAB-1 ghi *"mỗi mức một luồng duyệt → thêm workflow"* → `E10` ước theo **2 cấp**, ghi sẵn mức đổi |
 | **GĐ-L5-5** — Đội giả lập: **2 BE · 2 FE · 1 QA**, sprint **2 tuần**, 5 ngày làm việc/tuần | Bài lab không có đội thật. Lấy đúng số người LAB-1 đã chốt cho **tháng xây dựng đầu tiên (2026/12)** trong kế hoạch người theo tháng gửi khách — BE 2 người, FE 2 người, QA 1 người (`lab1-product-b/04-proposal/monthly_staffing_plan.py`, chốt 2026-10-08). Bản trước ghi 1 BE · 1 FE là bố trí ít hơn một nửa phần BE so với con số đã báo khách | Quyết năng lực sprint → đường kế hoạch của burndown trong `progress-report.md`. Không ảnh hưởng SP hay giờ của từng issue. ⚠ LAB-1 giảm người dần từ 2027/01 (FE còn 1, rồi 0,5); mô phỏng quá 2 sprint thì sức chứa phải giảm theo |
 
-Năm giả định trên **chỉ lấp chỗ để ngỏ**. Không dòng nào đè lên một khối RFP đã nêu rõ: bốn ngưỡng
-giờ lái (240 · 780 · 30 · 24h), ba dải nhiệt, bảy vai trò, mã cá thể bò 10 chữ số đều giữ nguyên
-giá trị RFP.
+Năm giả định trên **chỉ lấp vào những chỗ spec còn bỏ ngỏ**. Không giả định nào đè lên một điều mà
+RFP đã nói rõ. Cụ thể là bốn ngưỡng giờ lái (240 phút lái liên tục, 780 phút ràng buộc mỗi ngày, 30
+phút nghỉ để reset, trần 24 giờ một tuyến), ba dải nhiệt độ, bảy vai trò người dùng, và mã cá thể
+bò 10 chữ số — tất cả giữ nguyên đúng giá trị RFP đưa ra.
 
 ---
 
