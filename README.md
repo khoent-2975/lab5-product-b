@@ -29,7 +29,7 @@
 > - **Phần nền tảng dùng chung nhiều khả năng tôi rã còn thiếu.** LAB-1 cho nhóm này 65 ngày công,
 >   bản rã của tôi chỉ ra 6,8 ngày — **hụt 90%**. Chỗ này cần soi lại ở các task chưa rã đợt này.
 >
-> Cả ba tôi phân tích kỹ trong [estimate.md](estimate.md), mục 2 và mục 5.
+> Cả ba tôi phân tích kỹ trong [estimate.md](estimate.md), mục 2 và mục 4.
 
 ## 2. Link
 
@@ -55,7 +55,7 @@ Hai file HTML tự chứa, mở thẳng bằng trình duyệt, không cần ch�
 | `README.md` | File này — tổng quan, link, cấu trúc repo, ánh xạ spec → epic |
 | `PREMISE.md` | Tiền đề: backlog LAB-5 khác bản thiết kế LAB-4 ở đâu và vì sao. 3 spec sửa · 5 giả định bổ sung · 6 hướng đã chốt |
 | `task-breakdown.md` | Bản rã 307 item — nguồn nội dung của mọi issue trên board. Luật chia task, ánh xạ spec → issue, cụm ràng buộc giờ lái 2024, phần spec chưa thành issue (6.824 dòng) |
-| `estimate.md` | Ước công: skill chấm bao nhiêu ⟷ tôi chốt bao nhiêu, cách quy SWP ra giờ, tổng theo epic, chia việc Sprint 1, đối chiếu estimate LAB-1 |
+| `estimate.md` | Ước công: skill chấm bao nhiêu ⟷ tôi chốt bao nhiêu, cách quy SWP ra giờ, tổng theo epic, đối chiếu estimate LAB-1; phụ lục chia việc Sprint 1 |
 | `progress-report.md` | Báo cáo Sprint 1 giả lập: trạng thái cuối sprint, burndown, 10 rủi ro trễ có chủ và hạn |
 | `AI-report.md` | Dùng AI thế nào: skill và prompt, cách review output, chỗ hiệu quả và chỗ chưa tốt |
 | `BAN-GIAO.md` | Sổ làm việc nội bộ — hằng số của board, cấu trúc 307 issue, quyết định đã chốt, bảng 10 bước. Không nằm trong danh mục đề đòi, giữ lại để truy vết cách làm |
@@ -93,7 +93,7 @@ chiếu công được, nên một epic có thể gom nhiều màn, và một m�
 | `scr-23-lay-hang-boc-xep.md` · `scr-24-kiem-truoc-xuat.md` · `scr-26-pod.md` | [`#163`](https://github.com/khoent-2975/lab5-product-b/issues/163) — E09 Close the evidence gaps along the pick → dispatch → POD chain | Nhiều issue nhất: 44. 83 SWP · `#163`–`#206` |
 | `scr-31-nhap-csv-nhiet-do.md` · `scr-32-canh-bao-nhiet-do.md` · `scr-33-quan-ly-sai-lech.md` | [`#207`](https://github.com/khoent-2975/lab5-product-b/issues/207) — E10 Make the temperature chain judge, alert and resolve with a complete audit trail | **Nặng nhất board: 102 SWP** · `#207`–`#250` · ba dải nhiệt, hai mức cảnh báo theo `GĐ-L5-4` |
 | `scr-35-truy-xuat-nguon-goc.md` | [`#251`](https://github.com/khoent-2975/lab5-product-b/issues/251) — E11 Make the traceability chain complete, fast and safe to read | 32 SWP · `#251`–`#272` |
-| `scr-00-home-trang-chu.md` + phần dùng chung của cả 15 màn | [`#273`](https://github.com/khoent-2975/lab5-product-b/issues/273) — E12 Build the shared app shell, error boundaries and role surface | **Nghi rã thiếu — hụt 90% so với LAB-1**, xem `estimate.md` mục 5. 32 SWP · `#273`–`#293` |
+| `scr-00-home-trang-chu.md` + phần dùng chung của cả 15 màn | [`#273`](https://github.com/khoent-2975/lab5-product-b/issues/273) — E12 Build the shared app shell, error boundaries and role surface | **Nghi rã thiếu — hụt 90% so với LAB-1**, xem `estimate.md` mục 4. 32 SWP · `#273`–`#293` |
 | `01-architecture.md` §9.1 — 8 mock của prototype LAB-2, không thuộc màn nào | [`#294`](https://github.com/khoent-2975/lab5-product-b/issues/294) — E13 Replace the eight prototype mocks with real integration points | Rã thô nhất: 8 dev task mang 88 SWP, trung bình 11 điểm/ticket so với 3,8 của cả board. `#294`–`#307` |
 
 ### Vài điều về cách tôi dựng board

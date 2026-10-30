@@ -134,7 +134,7 @@ Chuỗi việc của Sprint 1 — dựng nền, viết hàm tính giờ lái, l�
 | Cả phần so được với LAB-1 | 4,2 | 352,3 ngày | Cách này ngầm cho rằng LAB-5 làm hết những gì LAB-1 ước. Không đúng — LAB-5 chỉ làm 15 trong 44 màn |
 
 Ba con số chênh nhau **2,5 lần**. Không phải phép đo hỏng. Lý do là độ sâu rã task giữa các epic rất
-lệch nhau — mục 5 nói rõ chỗ này.
+lệch nhau — mục 4 nói rõ chỗ này.
 
 > Tỉ lệ 1,7 dùng để **chia việc trong sprint**. Đừng dùng để **báo giá**. Nó rút ra từ một cặp epic,
 > mà đúng cặp đó lại là chỗ LAB-5 rã kỹ nhất board.
@@ -196,13 +196,65 @@ Quyết định này kéo theo bốn hệ quả, tôi ghi ra đây để sau kh�
 | E09 Lấy hàng đến POD | 44 | 27 | 83 | 141,1 | Nhiều issue nhất |
 | E10 Chuỗi nhiệt độ | 44 | 26 | 102 | 173,4 | **Nặng nhất board** |
 | E11 Truy xuất | 22 | 10 | 32 | 54,4 | |
-| E12 Nền tảng dùng chung | 21 | 11 | 32 | 54,4 | **Nghi rã thiếu** — xem mục 5. Một phần vào Sprint 1 |
+| E12 Nền tảng dùng chung | 21 | 11 | 32 | 54,4 | **Nghi rã thiếu** — xem mục 4. Một phần vào Sprint 1 |
 | E13 Tích hợp ngoài M1–M8 | 14 | 8 | 88 | 149,6 | **Rã thô nhất** — 11 điểm một ticket, cả board trung bình 3,8 |
 | **Tổng** | **307** | **176** | **671** | **1.140,7** | 38 issue còn lại là câu hỏi khách, không ước công |
 
 ---
 
-## 4. Chia việc cho Sprint 1
+## 4. So với estimate LAB-1
+
+LAB-1 ước cho **72 feature, 44 màn**. LAB-5 rã backlog cho **15 màn** mà LAB-4 đã thiết kế. Hai phạm
+vi khác nhau nên chỉ so được phần giao nhau, và chỉ so **BE với FE**, vì board không có việc QA.
+
+| Phần | LAB-1 | LAB-5 | Chênh | Vì sao |
+|---|---:|---:|---:|---|
+| Lộ trình và giờ ràng buộc — E01…E05 | 33 ngày | 39,3 ngày | **+19%** | LAB-4 soi kỹ 15 màn này, tìm ra 272 chỗ bản mẫu còn hở. Riêng **E04 là việc mới hoàn toàn**: chỗ lưu điểm nghỉ do `PREMISE` §3 `V-1` và `V-2` chốt, LAB-1 không ước cho nó dòng nào. E02 cũng phình thêm vì `V-3` chốt hình dạng `check_result` và `V-4` thêm `unique(valid_from)` |
+| Nhập hàng và kiểm hàng — E06 | 36 ngày | 9,6 ngày | −73% | LAB-5 chỉ làm một phần màn của nhóm này |
+| Tồn kho, lô, ba dải nhiệt — E07 | 39 ngày | 10,4 ngày | −73% | Như trên |
+| Hạn dùng và giao hàng — E08 | 29 ngày | 11,7 ngày | −60% | Như trên |
+| Xuất hàng, POD, khiếu nại — E09 | 63 ngày | 17,6 ngày | −72% | Như trên |
+| Nhiệt độ, sai lệch, HACCP — E10 | 41 ngày | 21,7 ngày | −47% | Hụt ít hơn các nhóm khác vì LAB-4 có soi nhóm này. `GĐ-L5-4` giữ hai mức cảnh báo thay vì ba nên chưa phát sinh thêm luồng duyệt |
+| Truy xuất và thu hồi — E11 | 28 ngày | 6,8 ngày | −76% | Như trên |
+| Nền tảng chung — E12 | 65 ngày | 6,8 ngày | **−90%** | **Bất thường, nghi rã thiếu** — xem bên dưới |
+| Tích hợp bên ngoài — E13 | 20 ngày | 18,7 ngày | **−7%** | Gần bằng nhau. Thay 8 mock bằng tích hợp thật là việc LAB-1 gộp rất thô, LAB-5 rã ra mới thấy hết |
+| **Tổng** | **354 ngày** | **142,6 ngày** | **−60%** | |
+
+LAB-1 còn **255 ngày công BE và FE** mà LAB-5 không đụng tới: dữ liệu gốc 52, báo cáo và xuất bằng
+chứng 43, bảo mật và phân quyền 37, kiểm thử hệ thống 41, chuyển đổi dữ liệu 50, đào tạo và hỗ trợ
+sau go-live 32.
+
+> ⚠ LAB-1 vẫn tính công cho `FT-02-03` (`FR-REC-03`) mà LAB-2 đã cắt bỏ. Cột LAB-1 ở dòng E06 chưa
+> trừ phần đó nên hơi cao hơn thực tế.
+
+### Ba điều rút ra
+
+**Một — chênh lệch giữa các epic trải từ −90% tới +19%, hơn hai lần.** Không một tỉ lệ đổi giờ nào
+đúng được cho cả board. Đây là lý do tỉ lệ 1,7 chỉ dùng để chia việc trong sprint, không dùng để báo
+giá.
+
+**Hai — phần hụt phần lớn là thật và hợp lý.** LAB-5 chỉ làm 15 trong 44 màn. E06 hụt 73% nhiều khả
+năng chỉ có nghĩa là LAB-5 chạm một phần nhóm đó, chứ không phải ước thiếu.
+
+**Ba — hai chỗ bất thường, phải xử lý chứ đừng lấy hệ số san cho phẳng:**
+
+- **E01 đến E05 vượt 19%, và E13 chỉ hụt 7%**, trong khi các nhóm khác hụt từ 47 tới 76%. Đúng hai
+  chỗ LAB-4 soi kỹ nhất. LAB-5 nhìn ra việc mà LAB-1 không thấy. Đây là tín hiệu tốt, nó chứng minh
+  công rã spec có giá trị.
+- **E12 nền tảng chung hụt 90%.** LAB-1 cho 65 ngày, nhiều nhất trong nhóm nền tảng; board chỉ có 32
+  điểm trên 11 dev task. Chỗ này không đổ cho phạm vi màn được, vì nền tảng chung thì màn nào cũng
+  dùng. **Nghi rã thiếu, cần soi lại backlog.**
+
+Thêm một chỗ nên để mắt: **E13 chỉ có 8 dev task mà 88 điểm** — trung bình 11 điểm một ticket, trong
+khi cả board trung bình 3,8. Rã thô nhất backlog. Đổi ra giờ sẽ cho những con số khó tin ở mức từng
+ticket.
+
+---
+
+## Phụ lục — Chia việc cho Sprint 1
+
+Phần này nằm ngoài khung đề đòi. Giữ lại vì `progress-report.md` và `BAN-GIAO.md` đều dẫn chiếu
+tới cách chia việc của Sprint 1.
 
 ### Hai nguyên tắc chia
 
@@ -319,68 +371,6 @@ Với đội hiện tại, cả board cần tối thiểu **5 sprint cho BE** nh
 nào cũng phải vay việc FE từ epic khác để FE khỏi ngồi không — đúng như Sprint 1 vừa vay 12 ticket
 của E03, E06, E07.
 
-Chỗ này nối với một phát hiện ở mục 5: **E12 nền tảng chung hụt 90% so với LAB-1**. Nền tảng chung là
+Chỗ này nối với một phát hiện ở mục 4: **E12 nền tảng chung hụt 90% so với LAB-1**. Nền tảng chung là
 nơi sinh ra nhiều việc FE nhất. Rã thiếu chỗ đó thì FE không có việc. Bổ sung cho đủ E12 thì FE tự
 khắc đầy, và con số hụt 90% cũng tự co lại. Hai triệu chứng, một nguyên nhân.
-
-## 5. So với estimate LAB-1
-
-LAB-1 ước cho **72 feature, 44 màn**. LAB-5 rã backlog cho **15 màn** mà LAB-4 đã thiết kế. Hai phạm
-vi khác nhau nên chỉ so được phần giao nhau, và chỉ so **BE với FE**, vì board không có việc QA.
-
-| Phần | LAB-1 | LAB-5 | Chênh | Vì sao |
-|---|---:|---:|---:|---|
-| Lộ trình và giờ ràng buộc — E01…E05 | 33 ngày | 39,3 ngày | **+19%** | LAB-4 soi kỹ 15 màn này, tìm ra 272 chỗ bản mẫu còn hở. Riêng **E04 là việc mới hoàn toàn**: chỗ lưu điểm nghỉ do `PREMISE` §3 `V-1` và `V-2` chốt, LAB-1 không ước cho nó dòng nào. E02 cũng phình thêm vì `V-3` chốt hình dạng `check_result` và `V-4` thêm `unique(valid_from)` |
-| Nhập hàng và kiểm hàng — E06 | 36 ngày | 9,6 ngày | −73% | LAB-5 chỉ làm một phần màn của nhóm này |
-| Tồn kho, lô, ba dải nhiệt — E07 | 39 ngày | 10,4 ngày | −73% | Như trên |
-| Hạn dùng và giao hàng — E08 | 29 ngày | 11,7 ngày | −60% | Như trên |
-| Xuất hàng, POD, khiếu nại — E09 | 63 ngày | 17,6 ngày | −72% | Như trên |
-| Nhiệt độ, sai lệch, HACCP — E10 | 41 ngày | 21,7 ngày | −47% | Hụt ít hơn các nhóm khác vì LAB-4 có soi nhóm này. `GĐ-L5-4` giữ hai mức cảnh báo thay vì ba nên chưa phát sinh thêm luồng duyệt |
-| Truy xuất và thu hồi — E11 | 28 ngày | 6,8 ngày | −76% | Như trên |
-| Nền tảng chung — E12 | 65 ngày | 6,8 ngày | **−90%** | **Bất thường, nghi rã thiếu** — xem bên dưới |
-| Tích hợp bên ngoài — E13 | 20 ngày | 18,7 ngày | **−7%** | Gần bằng nhau. Thay 8 mock bằng tích hợp thật là việc LAB-1 gộp rất thô, LAB-5 rã ra mới thấy hết |
-| **Tổng** | **354 ngày** | **142,6 ngày** | **−60%** | |
-
-LAB-1 còn **255 ngày công BE và FE** mà LAB-5 không đụng tới: dữ liệu gốc 52, báo cáo và xuất bằng
-chứng 43, bảo mật và phân quyền 37, kiểm thử hệ thống 41, chuyển đổi dữ liệu 50, đào tạo và hỗ trợ
-sau go-live 32.
-
-> ⚠ LAB-1 vẫn tính công cho `FT-02-03` (`FR-REC-03`) mà LAB-2 đã cắt bỏ. Cột LAB-1 ở dòng E06 chưa
-> trừ phần đó nên hơi cao hơn thực tế.
-
-### Ba điều rút ra
-
-**Một — chênh lệch giữa các epic trải từ −90% tới +19%, hơn hai lần.** Không một tỉ lệ đổi giờ nào
-đúng được cho cả board. Đây là lý do tỉ lệ 1,7 chỉ dùng để chia việc trong sprint, không dùng để báo
-giá.
-
-**Hai — phần hụt phần lớn là thật và hợp lý.** LAB-5 chỉ làm 15 trong 44 màn. E06 hụt 73% nhiều khả
-năng chỉ có nghĩa là LAB-5 chạm một phần nhóm đó, chứ không phải ước thiếu.
-
-**Ba — hai chỗ bất thường, phải xử lý chứ đừng lấy hệ số san cho phẳng:**
-
-- **E01 đến E05 vượt 19%, và E13 chỉ hụt 7%**, trong khi các nhóm khác hụt từ 47 tới 76%. Đúng hai
-  chỗ LAB-4 soi kỹ nhất. LAB-5 nhìn ra việc mà LAB-1 không thấy. Đây là tín hiệu tốt, nó chứng minh
-  công rã spec có giá trị.
-- **E12 nền tảng chung hụt 90%.** LAB-1 cho 65 ngày, nhiều nhất trong nhóm nền tảng; board chỉ có 32
-  điểm trên 11 dev task. Chỗ này không đổ cho phạm vi màn được, vì nền tảng chung thì màn nào cũng
-  dùng. **Nghi rã thiếu, cần soi lại backlog.**
-
-Thêm một chỗ nên để mắt: **E13 chỉ có 8 dev task mà 88 điểm** — trung bình 11 điểm một ticket, trong
-khi cả board trung bình 3,8. Rã thô nhất backlog. Đổi ra giờ sẽ cho những con số khó tin ở mức từng
-ticket.
-
----
-
-## Bước tiếp theo
-
-Bước 9 ✅ **xong** — Sprint 1 giả lập đã chạy 10 ngày, 110 lượt đổi `Status` đã đẩy lên Project.
-Kết quả: **37/45 ticket Done · 122/157 SWP · 78%**, `#34` còn 6,6 giờ. Bảng rủi ro 10 dòng có chủ
-và hạn. Xem [`progress-report.md`](progress-report.md)
-(bản HTML: [`reports/261025-GH-buoc-9-progress-report.html`](reports/261025-GH-buoc-9-progress-report.html)).
-
-Hai con số bước 9 rút ra phải áp khi cắt Sprint 2: trần thực tế **~82 SWP mỗi vai** chứ không phải
-94 (sức chứa 83% ở mục 4 là đo trên giờ danh nghĩa; trên giờ hiệu dụng đã là 95%), và chừa **12%**
-cho công sửa bug của Sprint 1 ⇒ mỗi vai nhận khoảng **72 SWP việc mới**.
-
-Bước 10 — `AI-report.md` + `README.md` đầy đủ, soát theo đề, mở thử bằng cửa sổ ẩn danh.

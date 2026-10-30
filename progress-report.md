@@ -162,7 +162,7 @@ chạy song song đúng thiết kế, không mắt nào trễ.
 Bảng rủi ro dựng từ ba nguồn. Thứ nhất là kết quả mô phỏng vừa trình bày ở trên. Thứ hai là một
 lượt rà soát theo năm góc chuyên môn — kiến trúc, bảo mật, hiệu năng, trải nghiệm người dùng và
 phản biện giả định — mỗi góc kết luận độc lập trước khi đối chiếu với nhau. Thứ ba là bốn khoảng
-hụt đã xác định từ bước ước lượng, ghi trong `estimate.md` mục 2 và mục 5.
+hụt đã xác định từ bước ước lượng, ghi trong `estimate.md` mục 2 và mục 4.
 
 **Đánh giá chung: cần thận trọng, chưa tới mức phải dừng.** Mười rủi ro dưới đây xếp theo mức
 nghiêm trọng giảm dần.

@@ -54,7 +54,7 @@ thông tin gì.
 |---|---|
 | 1 | ~~Backlog ~120 issue~~ → **rã thật ra 307 item**: 13 epic · 26 story · 54 parent BE/FE · 176 dev task · 38 investigation. Mọi dòng trong 229 dòng ước được đều truy về một dev task. Xem `task-breakdown.md` §1.1 |
 | 2 | **M-1**: chỗ lưu điểm nghỉ `休憩` làm **trước**, E04 chặn E03. Ghi là giả định vendor (bài lab không hỏi khách được) — `PREMISE.md` §1 + §3 `V-1` `V-2` `V-6` |
-| 3 | ~~Sprint 1 = T0 + T1 + T2 + T3~~ → **thay ở bước 8.** Sprint 1 chốt **45 dev task · 157 SWP · 266,9 giờ**: trọn E01 + E02 + phần E12 nền tảng chung, cộng **12 ticket FE vay** từ E03/E06/E07 để FE khỏi ngồi không. Thêm `#286` mở menu SCR-19 — không có nó thì `/routes` trả 404 và `AC-28-01` không nghiệm thu được. Nhánh công bố (T4→T6) vẫn sang Sprint 2. Chi tiết: `estimate.md` mục 4 |
+| 3 | ~~Sprint 1 = T0 + T1 + T2 + T3~~ → **thay ở bước 8.** Sprint 1 chốt **45 dev task · 157 SWP · 266,9 giờ**: trọn E01 + E02 + phần E12 nền tảng chung, cộng **12 ticket FE vay** từ E03/E06/E07 để FE khỏi ngồi không. Thêm `#286` mở menu SCR-19 — không có nó thì `/routes` trả 404 và `AC-28-01` không nghiệm thu được. Nhánh công bố (T4→T6) vẫn sang Sprint 2. Chi tiết: `estimate.md` phụ lục |
 | 4 | ~~Đội 1 BE · 1 FE · 1 QA~~ → **sửa ở bước 8.** Đội giả lập **2 BE · 2 FE · 1 QA**, sprint 2 tuần (`GĐ-L5-5`), cho khớp kế hoạch người theo tháng của LAB-1 (tháng xây dựng đầu tiên 2026/12). Sức chứa **94 SWP mỗi vai** thay vì 47 |
 | 5 | ~~Quy SWP → giờ chưa chốt~~ → **chốt ở bước 8: 1 SWP = 1,7 giờ**, rút từ E01+E02 đối chiếu LAB-1 (19 ngày công × 8 giờ ÷ 92 SWP = 1,65 → làm tròn). Dùng để **chia việc trong sprint**, KHÔNG dùng để báo giá — xem `estimate.md` mục 2 |
 | 6 | Còn thiếu: **mã học viên** trong `README.md` |
